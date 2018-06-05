@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aberscene</title>
+    <link rel='shortcut icon' type='image/png' href='favicon.png'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <script src="events.js"></script>
+
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+</head>
+<body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApTvTwhzrDL5KuyNJAukTGCkDE6hOudVI&callback=main" async defer></script>
+<div class="navi">
+    <nav id="navibar" class="navbar navbar-expand-xl navbar-light" style="background: rgba(255,255,255,0.9);">
+        <a class="navbar-brand" href="#">ABER<strong>SCENE</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-music"></i> <span></span>Entertainment</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Music</a>
+                        <a class="dropdown-item" href="#">Comedy</a>
+                        <a class="dropdown-item" href="#">Cinema</a>
+                        <a class="dropdown-item" href="#">Libraries</a>
+                        <a class="dropdown-item" href="#">Kids and Family</a>
+                        <a class="dropdown-item" href="#">Theme Parks</a>
+                        <a class="dropdown-item" href="#">Nightlife</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-utensils"></i> <span></span>Dining</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Takeaway</a>
+                        <a class="dropdown-item" href="#">Pubs</a>
+                        <a class="dropdown-item" href="#">Cafes/Coffee shops</a>
+                        <a class="dropdown-item" href="#">Indian</a>
+                        <a class="dropdown-item" href="#">Chinese</a>
+                        <a class="dropdown-item" href="#">Italian</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bed"></i> <span></span>Accommodation</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Hotels</a>
+                        <a class="dropdown-item" href="#">B&B</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-futbol"></i> <span></span>Sports</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Stadium</a>
+                        <a class="dropdown-item" href="#">Sport centres</a>
+                        <a class="dropdown-item" href="#">Gyms</a>
+                        <a class="dropdown-item" href="#">Swimming Pools</a>
+                        <a class="dropdown-item" href="#">Running</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-university"></i> <span></span>Culture</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Art Galleries</a>
+                        <a class="dropdown-item" href="#">Museums</a>
+                        <a class="dropdown-item" href="#">Theatre</a>
+                        <a class="dropdown-item" href="#">Faith</a>
+                        <a class="dropdown-item" href="#">Sights</a>
+                        <a class="dropdown-item" href="#">Castles</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-briefcase"></i> <span></span>Professional</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Banks</a>
+                        <a class="dropdown-item" href="#">Universities</a>
+                        <a class="dropdown-item" href="#">Solicitors</a>
+                        <a class="dropdown-item" href="#">Schools</a>
+                    </div>
+                </li>
+
+                <li class="nav-item"><a class="nav-link">
+                    <div id="reportrange" class="pull-right">
+                        <i class="far fa-calendar-alt"></i>&nbsp;<span></span><b class="caret"></b>
+                    </div></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="search_form">
+                <input class="form-control mr-sm-2" type="search" id="search_box" onkeyup="mySearch()" placeholder="Search ..." aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit" id="search_btn"><i class="fas fa-search"></i></button>
+            </form>
+            <a id="btn_add" href="#" onclick="$('#add').show();"><i class="fas fa-plus"></i></a>
+        </div>
+    </nav>
+    <div id="clear"><a href="#" onclick="filterMap('clear');"><i class="fas fa-paint-brush"></i> clear filter</a></div>
+</div>
+
+<div id="map"></div>
+<div id="info" class="box"></div>
+<div id="add">
+    <a href="#" style="margin-top:-1em;color:black;padding:0 3px;text-decoration:none;float:right;" onclick="$('#add').hide();"><i class="fas fa-times"></i></a><br>
+    <h4>Add Location</h4>
+    <br>
+    <form id="add_form">
+        <div class="form-group row">
+            <label for="location_name" class="col-4 col-form-label">Location name</label>
+            <div class="col-8">
+                <input id="location_name" name="location_name" class="form-control here" required="required" type="text">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cat" class="col-4 col-form-label">Category</label>
+            <div class="col-8">
+                <select id="cat" name="cat" class="custom-select" required="required">
+                    <option></option>
+                    <option>Accommodation</option>
+                    <option>Culture</option>
+                    <option>Dining</option>
+                    <option>Entertainment</option>
+                    <option>Professional</option>
+                    <option>Sports</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="subcat" class="col-4 col-form-label">Subcategory</label>
+            <div class="col-8">
+                <select id="subcat" name="subcat" class="custom-select" required="required">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="website" class="col-4 col-form-label">Website</label>
+            <div class="col-8">
+                <input id="website" name="website" aria-describedby="websiteHelpBlock" required="required" class="form-control here" type="url">
+                <span id="websiteHelpBlock" class="form-text text-muted">e.g. https://www.yourfavoriteplace.com</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="facebook" class="col-4 col-form-label">Facebook</label>
+            <div class="col-8">
+                <input id="facebook" name="facebook" aria-describedby="facebookHelpBlock" required="required" class="form-control here" type="url">
+                <span id="facebookHelpBlock" class="form-text text-muted">e.g. https://www.facebook.com/yourfavoriteplace</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+h5 {
+    font-weight: lighter;
+    width: 90%;
+}
+
+h4 {
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+#map {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#clear {
+    padding: 1em;
+    z-index: 10;
+    background-color: rgba(255,255,255,0.6);
+}
+
+#clear:hover {
+    background-color: rgba(255,255,255,0.7);
+}
+
+#clear a, #info a {
+    color: #565656;
+}
+
+#clear a:hover, #info a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.gm-style-iw {
+    max-width: 400px !important;
+    overflow: auto !important;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc, .gm-svpc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+* {box-sizing: border-box;}
+
+.navi {
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 33px 48px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 33px 48px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 33px 48px 0px rgba(0,0,0,0.15);
+}
+
+.box:active{
+    cursor:move;
+    box-shadow: 0 20px 50px rgba(0,0,0,.9);
+}
+
+#info {
+    width: 40%;
+    position: absolute;
+    padding: 2em;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    font-size: 10pt;
+    display: none;
+    box-sizing: border-box;
+    -webkit-box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    -moz-box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    transition: background .2s;
+    overflow: auto;
+}
+
+.fab fa-facebook-square {
+    color: #bbb;
+}
+
+.event_names:hover {
+    cursor: pointer;
+}
+
+.event_desc {
+    padding: 1em;
+}
+
+#reportrange {
+    cursor: pointer;
+}
+
+#search_box {
+    width: 70% !important;
+}
+
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+    #info, .bg-light,.navbar, #add, #rating {
+        background: rgba(255,255,255,0.6) !important;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+}
+
+@supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+    #info, .bg-light, .navbar, #add, #rating {
+        background: rgba(255,255,255,0.9) !important;
+    }
+}
+
+hr.style14 {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, #aeadad, transparent);
+    background-image: -moz-linear-gradient(left, transparent, #aeadad, transparent);
+    background-image: -ms-linear-gradient(left, transparent, #aeadad, transparent);
+    background-image: -o-linear-gradient(left, transparent, #aeadad, transparent);
+}
+
+#streetview {
+    margin-top: 2em;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+}
+
+.svg-inline--fa.fa-w-16, .svg-inline--fa.fa-w-13,.svg-inline--fa.fa-w-18 {
+    xwidth: 0.7em !important;
+    padding-right: 3px;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+#add, #rating {
+    position: absolute;
+    padding: 2em;
+    margin: 0;
+    top: 4.2em;
+    left: 0;
+    z-index: 20;
+    font-size: 10pt;
+    display: none;
+    box-sizing: border-box;
+    -webkit-box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    -moz-box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    box-shadow: -20px 0px 59px -13px rgba(0,0,0,0.35);
+    transition: background .2s;
+    overflow: auto;
+}
+
+#add {
+    min-width: 40%;
+    max-width: 100%;
+}
+
+#rating {
+    min-width: 30%;
+    max-width: 100%;
+}
+
+.col-form-label {
+    text-align: right;
+    max-width: 27% !important;
+}
+
+#change_rating td {
+    padding: 0.7em;
+}
